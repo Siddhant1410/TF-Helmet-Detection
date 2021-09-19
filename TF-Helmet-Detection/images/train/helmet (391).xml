@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>helmet (391).jpg</filename>
+	<path>F:\Work_hub\TF_object_detection\Tensorflow\workspace\training_demo\images\helmet (391).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>150</width>
+		<height>188</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>no_helmet</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>80</xmin>
+			<ymin>41</ymin>
+			<xmax>102</xmax>
+			<ymax>68</ymax>
+		</bndbox>
+	</object>
+</annotation>

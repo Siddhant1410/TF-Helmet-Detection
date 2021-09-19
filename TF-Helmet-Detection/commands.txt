@@ -1,0 +1,19 @@
+#training command:
+python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config
+python model_main_tf2.py --model_dir=models/faster_rcnn_resnet50_v1 --pipeline_config_path=models/faster_rcnn_resnet50_v1/pipeline.config
+python model_main_tf2.py --model_dir=models/faster_rcnn_inception_resnet50_v2 --pipeline_config_path=models/faster_rcnn_inception_resnet50_v2/pipeline.config
+
+#evaluation command:
+python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config --checkpoint_dir=models/ssd_mobilenet_v2_fpnlite
+python model_main_tf2.py --model_dir=models/faster_rcnn_resnet50_v1 --pipeline_config_path=models/faster_rcnn_resnet50_v1/pipeline.config --checkpoint_dir=models/faster_rcnn_resnet50_v1
+python model_main_tf2.py --model_dir=models/faster_rcnn_inception_resnet50_v2 --pipeline_config_path=models/faster_rcnn_inception_resnet50_v2/pipeline.config --checkpoint_dir=models/faster_rcnn_inception_resnet50_v2
+
+#model export command:
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir .\models\ssd_mobilenet_v2_fpnlite\ --output_directory .\exported-models\my_model
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\faster_rcnn_resnet50_v1\pipeline.config --trained_checkpoint_dir .\models\faster_rcnn_resnet50_v1\ --output_directory .\exported-models\my_model
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\faster_rcnn_inception_resnet50_v2\pipeline.config --trained_checkpoint_dir .\models\faster_rcnn_inception_resnet50_v2\ --output_directory .\exported-models\my_model
+
+#tensorboard
+tensorboard --logdir=models/ssd_mobilenet_v2_fpnlite
+tensorboard --logdir=models/faster_rcnn_resnet50_v1
+tensorboard --logdir=models/faster_rcnn_inception_resnet50_v2
