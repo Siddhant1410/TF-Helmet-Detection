@@ -15,7 +15,7 @@ IMAGE_PATHS = 'test_images/img6.jpg'
 
 
 # PROVIDE PATH TO MODEL DIRECTORY
-PATH_TO_MODEL_DIR = 'Faster-RCNN_7k_epochs/my_model'
+PATH_TO_MODEL_DIR = 'my_model'
 
 # PROVIDE PATH TO LABEL MAP
 PATH_TO_LABELS = 'annotations/label_map.pbtxt'
